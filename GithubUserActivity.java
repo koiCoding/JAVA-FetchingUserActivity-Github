@@ -7,8 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class GithubUserActivity {
-    private static int lineDelimiterLength = 10;
-    private static String lineDelimiter = "-".repeat(lineDelimiterLength);
+    private static final  int lineDelimiterLength = 10;
+    private static final String lineDelimiter = "-".repeat(lineDelimiterLength);
     
     public static void main(String[] args) {
         if(args.length == 0){
