@@ -7,6 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class GithubUserActivity {
+    private static int lineDelimiterLength = 10;
+    private static String lineDelimiter = "-".repeat(lineDelimiterLength);
+    
     public static void main(String[] args) {
         if(args.length == 0){
             System.out.print("Username argument is missing!");
@@ -28,7 +31,6 @@ public class GithubUserActivity {
         String apiUrl = "https://api.github.com/users/" + username + "/events";
 
         try {
-            // Create a URL object
             URL url = new URI(apiUrl).toURL();
 
             // Open a connection
@@ -83,12 +85,12 @@ public class GithubUserActivity {
                             }
                         }
                         System.out.println("Created At: " + createdAt);
-                        System.out.println("--------------------------------------");
+                        System.out.println(lineDelimiter);
                     } 
                 }
 
                 System.out.println("Total number of commits: " + totalCommits);
-                System.out.println("--------------------------------------");
+                System.out.println(lineDelimiter);
             } else {
                 System.out.println("Error: Unable to fetch user activity. Response Code: " + responseCode);
             }
