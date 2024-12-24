@@ -18,9 +18,9 @@
    cd local_path
    ```
 3. Run the following command in the terminal:
-  ```bash
-  java -cp "lib/json.jar;." GithubUserActivity username
-  ```
+   ```bash
+   java -cp "lib/json.jar;." GithubUserActivity username
+   ```
 
 4. Output instance:
    ```bash
